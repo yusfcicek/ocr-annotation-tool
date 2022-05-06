@@ -1,5 +1,5 @@
 # OCR Annotation Tool
-OCR Annotation Tool is a graphical image annotation tool.
+OCR Annotation Tool is a graphical text annotation tool.
 It is written in Python and uses Qt for its graphical interface. You can use it to tag your own data for the [Deep Text Recognition Repository](https://github.com/clovaai/deep-text-recognition-benchmark). 
 Its interface and usage diagram is taken as an example from the [LabelImg](https://github.com/tzutalin/labelImg) repository for easy use for the user. 
 
@@ -12,8 +12,8 @@ Its interface and usage diagram is taken as an example from the [LabelImg](https
 
 ## In the future, 
 
-- [x] Labeling rectangles where have texts, With this feature, the positions of curved texts can be detected. [East Text Detection](https://github.com/SakuraRiven/EAST)
-- [ ] Labeling texts as polygons, 
+- [x] Labeling rectangles where have texts
+- [ ] Labeling texts as polygons, With this feature, the positions of curved texts can be detected. [East Text Detection](https://github.com/SakuraRiven/EAST)
 - [ ] Export and import, 
 - [ ] Cropping text rectangles and labeling as new photos will come.
 
