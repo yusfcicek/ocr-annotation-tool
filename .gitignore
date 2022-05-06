@@ -1,0 +1,13 @@
+*.pyc
+*.code-workspace
+*.json
+*.ui
+*.qrc
+*.pyproject
+*.user
+*.db
+*.DS_Store
+*.jpg
+*.jpeg
+*.png
+*.gif
