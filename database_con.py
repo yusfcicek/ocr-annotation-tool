@@ -66,3 +66,19 @@ class DataBase:
 
         connection.commit()
         connection.close()
+
+    @classmethod
+    def pull_all_annot(cls):
+        connection = sqlite3.connect("./db/annotations.db")
+        cursor = connection.execute("SELECT * FROM ANNOTATIONS")
+
+        stagingMem = []
+        for row in cursor:
+            filePath = row[0]
+            labelID = row[1]
+            label = row[2]
+            pt1, pt2 = cls.__extract_pt(row[3], row[4])
+            stagingMem.append([filePath, labelID, label, pt1, pt2])
+
+        connection.close()
+        return stagingMem.copy()
