@@ -20,8 +20,8 @@ def export_annot():
             area = (annot[3][0], annot[3][1], annot[4][0], annot[4][1])
             cropped_img = img.crop(area)
 
-            outputImgName = f"{i}.png"
-            for _ in range(len(str(len(annots))) + 1 - len(str(i))):
+            outputImgName = f"{i + 1}.png"
+            for _ in range(len(str(len(annots))) + 1 - len(str(i + 1))):
                 outputImgName = "0" + outputImgName
 
             path = f"{folderPath}/{outputImgName}"
