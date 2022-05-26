@@ -145,10 +145,11 @@ class MainWindow(QtWidgets.QWidget):
         return super().eventFilter(source, event)
 
     def file_list_widg_item_db_clk(self):
-        self.imgNavIndex = self.ui.file_list_widg.currentRow()
-        self.ui.img_lbl.setPixmap(QtGui.QPixmap(self.imagesPath[self.imgNavIndex]))
-        self.stagingMem = DataBase.pull_data(self.imagesPath[self.imgNavIndex])
-        self.update_annotations()
+        if self.isAnyFolderOpened:
+            self.imgNavIndex = self.ui.file_list_widg.currentRow()
+            self.ui.img_lbl.setPixmap(QtGui.QPixmap(self.imagesPath[self.imgNavIndex]))
+            self.stagingMem = DataBase.pull_data(self.imagesPath[self.imgNavIndex])
+            self.update_annotations()
 
     def open_img_btn_click(self):
         self.ui.open_img_btn.setStyleSheet(
