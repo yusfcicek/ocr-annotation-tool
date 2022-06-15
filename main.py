@@ -299,7 +299,9 @@ class MainWindow(QtWidgets.QWidget):
         if self.isAnyImageOpened:
             DataBase.sync_db(self.imagesPath[self.imgNavIndex], self.stagingMem)
             QtWidgets.QMessageBox.about(
-                self, "Notice", "Annotations saved.",
+                self,
+                "Notice",
+                "Annotations saved.",
             )
 
         else:
